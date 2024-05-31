@@ -1,10 +1,13 @@
-*{
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-.hero{
+
+/* Hero Section */
+.hero {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(45deg, #7e0542, #6a0763d6);
@@ -13,17 +16,23 @@
     justify-content: center;
     flex-direction: column;
     color: white;
+    padding: 20px;
+    text-align: center;
 }
-.hero h1{
+
+.hero h1 {
     font-size: 45px;
     font-weight: 500;
     margin-top: -50px;
     margin-bottom: 50px;
 }
-.hero h1 span{
+
+.hero h1 span {
     color: #ff2963;
 }
-textarea{
+
+/* Textarea */
+textarea {
     width: 600px;
     height: 250px;
     background: #61053e;
@@ -36,16 +45,21 @@ textarea{
     resize: none;
     margin: 30px;
 }
+
 textarea::placeholder {
     font-size: 16px;
     color: #ddd;
 }
+
+/* Row Container */
 .row {
     width: 600px;
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
+/* Button */
 button {
     background-color: #ff2963;
     color: #fff;
@@ -55,12 +69,17 @@ button {
     border: 0;
     outline: 0;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
-button img{
+
+button img {
     width: 16px;
     margin-right: 10px;
 }
-select{
+
+/* Select Dropdown */
+select {
     flex: 1;
     color: #fff;
     background-color: #61053e;
@@ -71,8 +90,47 @@ select{
     border-radius: 35px;
     appearance: none;
     background-image: url(images/dropdown.png);
-    background-repeat: no-repeat ;
+    background-repeat: no-repeat;
     background-size: 15px;
-    background-position-x:calc(100% - 20px) ;
-    background-position-y:calc(20px) ;
+    background-position-x: calc(100% - 20px);
+    background-position-y: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 35px;
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+
+    textarea {
+        width: 90%;
+        height: 200px;
+        font-size: 14px;
+        padding: 15px;
+        margin: 20px;
+    }
+
+    .row {
+        width: 90%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    select {
+        width: 100%;
+        height: 45px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button img {
+        width: 14px;
+        margin-right: 8px;
+    }
 }
